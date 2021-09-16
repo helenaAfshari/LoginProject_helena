@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+  xmlns:android="http://schemas.android.com/apk/res/android"
+  xmlns:tools="http://schemas.android.com/tools"
+  android:orientation="vertical"
+  android:layout_width="match_parent"
+  android:layout_height="match_parent">
+
+
+  <EditText
+    android:id="@+id/edt_nameLogin"
+    android:inputType="textPersonName"
+    android:textColorHint="@color/purple_500"
+    android:textAllCaps="true"
+    android:hint="نام کاربری"
+    android:layout_margin="10dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" />
+
+  <EditText
+    android:id="@+id/edt_paswordLogin"
+    android:inputType="textPersonName"
+    android:textColorHint="@color/purple_500"
+    android:textAllCaps="true"
+    android:hint="کلمه عبور"
+    android:layout_margin="10dp"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content" />
+
+  <Button
+    android:id="@+id/login"
+    android:layout_gravity="center"
+    android:text="ورود"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"/>
+
+  <RelativeLayout
+    android:id="@+id/Relativ"
+    android:layout_width="match_parent"
+    android:textDirection="rtl"
+    android:padding="16dp"
+    android:layout_height="wrap_content">
+
+    <TextView
+      android:id="@+id/textt"
+      android:text="ایا تا کنون ثبتنام کرده اید? "
+      android:layout_alignParentRight="true"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"/>
+
+    <TextView
+      android:id="@+id/registerLogin"
+      android:text="ثبتنام"
+      android:layout_marginRight="10dp"
+      android:layout_toLeftOf="@id/textt"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"/>
+
+  </RelativeLayout>
+</LinearLayout>
