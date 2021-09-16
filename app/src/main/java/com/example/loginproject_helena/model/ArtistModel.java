@@ -55,6 +55,8 @@ public class ArtistModel implements Parcelable {
   }
 
   public String getTitle() {
+    if(title.equals(""))
+      title = "name";
     return title;
   }
 
