@@ -47,6 +47,9 @@ public class ArtistModel implements Parcelable {
   }
 
   public String getContent() {
+    if(content.equals(""))
+      content = "content";
+
     return content;
   }
 
