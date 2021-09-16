@@ -39,6 +39,8 @@ public class ArtistModel implements Parcelable {
 
     if(id == -1)
       id = 0;
+    else if (id == -2)
+      return 0;
     return id;
   }
 
