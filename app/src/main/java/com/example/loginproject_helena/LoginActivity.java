@@ -19,7 +19,7 @@ public class LoginActivity extends AppCompatActivity {
   TextView registerLogin;
   String signModel;
 
-
+  
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);

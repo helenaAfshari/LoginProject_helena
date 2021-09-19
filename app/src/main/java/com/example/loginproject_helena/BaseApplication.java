@@ -43,7 +43,6 @@ public class BaseApplication extends Application {
     editor.putString("hh","kk");
     editor.putLong("long",1);
     editor.putFloat("floate",0.3f);
-    editor.putBoolean("isLog",true);
     editor.commit();
   }
 
