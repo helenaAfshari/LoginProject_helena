@@ -1,6 +1,5 @@
 package com.example.loginproject_helena;
 
-import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.View;
@@ -10,9 +9,6 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.loginproject_helena.activities.SplashActivity;
-import com.example.loginproject_helena.database.AppDataBase;
-import com.example.loginproject_helena.model.SignDao;
-import com.example.loginproject_helena.model.SignModel;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -21,7 +17,6 @@ public class LoginActivity extends AppCompatActivity {
   EditText edt_nameLogin, edt_paswordLogin;
   Button login;
   TextView registerLogin;
-  SignDao signDao;
   String signModel;
 
 
@@ -34,7 +29,6 @@ public class LoginActivity extends AppCompatActivity {
     login = findViewById(R.id.login);
     registerLogin = findViewById(R.id.registerLogin);
 
-    SignModel model = new SignModel();
     String s = edt_nameLogin.getText().toString();
 
     SharedPreferences prefLoginn = getSharedPreferences("MYSHARED",MODE_PRIVATE);
@@ -50,15 +44,11 @@ public class LoginActivity extends AppCompatActivity {
         SplashActivity splashActivity = new SplashActivity();
         if (splashActivity.isLog)
         {
-          Intent intent = new Intent(LoginActivity.this,MainActivity.class);
-          startActivity(intent);
+         
         }
       }
     });
 
-    signDao = AppDataBase.getDataBase(this).getSignDao();
-    signModel =signDao.getAllSign("");
-     toLogin();
   }
 
 

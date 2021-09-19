@@ -8,19 +8,15 @@ import android.os.Handler;
 
 import com.example.loginproject_helena.BaseApplication;
 import com.example.loginproject_helena.LoginActivity;
-import com.example.loginproject_helena.MainActivity;
 import com.example.loginproject_helena.R;
-import com.example.loginproject_helena.database.AppDataBase;
-import com.example.loginproject_helena.model.ArtistDao;
 
 
 public class SplashActivity extends Activity {
 
   BaseApplication baseApplication;
-  AppDataBase appDataBase;
+
 
  public Boolean isLog;
-  ArtistDao artistDao;
   /*Duration of wait*/
   private final int SPLASH_DISPLAY_LENGTH = 2000;
 
@@ -47,7 +43,7 @@ public class SplashActivity extends Activity {
         Intent intent;
         if (isLog)
         {
-          intent = new Intent(SplashActivity.this, MainActivity.class);
+           intent = new Intent(SplashActivity.this,BaseApplication.class);
         }else {
           intent = new Intent(SplashActivity.this, LoginActivity.class);
         }
