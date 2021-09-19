@@ -24,7 +24,7 @@ public class LoginActivity extends AppCompatActivity {
   SignDao signDao;
   String signModel;
 
-
+  
   @Override
   protected void onCreate(Bundle savedInstanceState) {
     super.onCreate(savedInstanceState);
