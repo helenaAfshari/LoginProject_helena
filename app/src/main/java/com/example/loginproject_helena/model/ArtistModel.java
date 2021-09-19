@@ -16,7 +16,7 @@ public class ArtistModel implements Parcelable {
   private long id;
 
   //TODO change variable name => content to link
-  private String content;
+  private String link;
   //TODO change var name >>>> title to name
   private String name;
 
@@ -49,14 +49,14 @@ public class ArtistModel implements Parcelable {
   }
 
   public String getContent() {
-    if(content.equals(""))
-      content = "content";
+    if(link.equals(""))
+      link = "content";
 
-    return content;
+    return link;
   }
 
   public void setContent(String data) {
-    this.content = content;
+    this.link = link;
   }
 
   public String getTitle() {
@@ -85,7 +85,7 @@ public class ArtistModel implements Parcelable {
   @Override
   public void writeToParcel(Parcel dest, int flags) {
     dest.writeLong(id);
-    dest.writeString(content);
+    dest.writeString(link);
     dest.writeString(name);
     dest.writeString(String.valueOf(image));
   }
