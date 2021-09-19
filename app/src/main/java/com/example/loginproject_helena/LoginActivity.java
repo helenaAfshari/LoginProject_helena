@@ -44,7 +44,7 @@ public class LoginActivity extends AppCompatActivity {
         SplashActivity splashActivity = new SplashActivity();
         if (splashActivity.isLog)
         {
-         
+
         }
       }
     });
@@ -72,5 +72,9 @@ public class LoginActivity extends AppCompatActivity {
         Toast.makeText(this, "اطلاعات ذخیره نشد", Toast.LENGTH_SHORT).show();
       }
     }
+  }
+  public void helena()
+  {
+    Toast.makeText(this, "helena", Toast.LENGTH_SHORT).show();
   }
 }
