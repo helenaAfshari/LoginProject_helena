@@ -13,6 +13,7 @@ public class BaseApplication extends Application {
   public void onCreate() {
     //اینجا shared PreferenceوووdataBaseرو دو تا Objectاز روش میسازیم
     stringShared();
+    isLogin();
     super.onCreate();
   }
 
@@ -35,7 +36,6 @@ public class BaseApplication extends Application {
       Toast.makeText(this, "false", Toast.LENGTH_SHORT).show();
     }
     return pref;
-
   }
 
   public void stringShared()
@@ -43,6 +43,7 @@ public class BaseApplication extends Application {
     editor.putString("hh","kk");
     editor.putLong("long",1);
     editor.putFloat("floate",0.3f);
+    editor.putBoolean("isLog",false);
     editor.commit();
   }
 
