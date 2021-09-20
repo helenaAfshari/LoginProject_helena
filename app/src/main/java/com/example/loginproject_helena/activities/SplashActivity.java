@@ -5,6 +5,7 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.os.Handler;
+import android.widget.Toast;
 
 import com.example.loginproject_helena.BaseApplication;
 import com.example.loginproject_helena.LoginActivity;
@@ -49,7 +50,7 @@ public class SplashActivity extends Activity {
         }
         startActivity(intent);
 
-        
+
 
         /*
         * android application class
@@ -65,5 +66,9 @@ public class SplashActivity extends Activity {
               main activity*/
       }
     }, SPLASH_DISPLAY_LENGTH);
+  }
+  public void splash()
+  {
+    Toast.makeText(this, "splash", Toast.LENGTH_SHORT).show();
   }
 }
