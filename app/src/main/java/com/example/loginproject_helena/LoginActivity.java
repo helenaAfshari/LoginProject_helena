@@ -73,10 +73,7 @@ public class LoginActivity extends AppCompatActivity {
       }
     }
   }
-  public void helena()
-  {
-    Toast.makeText(this, "helena", Toast.LENGTH_SHORT).show();
-  }
+
   public void temp()
   {
     Toast.makeText(this, "temp", Toast.LENGTH_SHORT).show();
