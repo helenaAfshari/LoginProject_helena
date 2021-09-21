@@ -28,6 +28,10 @@ public class BaseApplication extends Application {
   public SharedPreferences isLogin()
   {
     Log.i("islog", String.valueOf(pref.getBoolean("isLog", true)));
+    Log.i("String",String.valueOf(pref.getString("logString","helena")));
+    Log.i("Long",String.valueOf(pref.getLong("Long",44)));
+    Log.i("Float", String.valueOf(Float.valueOf(pref.getFloat("Float",  5.5f))));
+
     return pref;
   }
 
@@ -37,7 +41,7 @@ public class BaseApplication extends Application {
     editor.putBoolean("isLog",true);
     editor.putString("hh","kk");
     editor.putLong("long",1);
-    editor.putFloat("floate",0.3f);
+    editor.putFloat("Float",1.3f);
     editor.apply();
   }
 
