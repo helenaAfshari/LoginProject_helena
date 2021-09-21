@@ -40,11 +40,10 @@ public class BaseApplication extends Application {
     editor = getSharedPreference().edit();
     editor.putBoolean("isLog",true);
     editor.putString("hh","kk");
-    editor.putLong("long",1);
+    editor.putLong("Long",1);
     editor.putFloat("Float",1.3f);
     editor.apply();
   }
-
 
 
 
