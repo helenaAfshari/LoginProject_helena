@@ -2,7 +2,7 @@ package com.example.loginproject_helena;
 
 import android.app.Application;
 import android.content.SharedPreferences;
-import android.widget.Toast;
+import android.util.Log;
 
 public class BaseApplication extends Application {
 
@@ -12,9 +12,9 @@ public class BaseApplication extends Application {
   @Override
   public void onCreate() {
     //اینجا shared PreferenceوووdataBaseرو دو تا Objectاز روش میسازیم
+    super.onCreate();
     stringShared();
     isLogin();
-    super.onCreate();
   }
 
 //single tone
@@ -27,24 +27,18 @@ public class BaseApplication extends Application {
 
   public SharedPreferences isLogin()
   {
-    boolean enable = pref.getBoolean("isLog",false);
-
-    if (enable)
-    {
-      Toast.makeText(this, "true", Toast.LENGTH_SHORT).show();
-    }else {
-      Toast.makeText(this, "false", Toast.LENGTH_SHORT).show();
-    }
+    Log.i("islog", String.valueOf(pref.getBoolean("isLog", true)));
     return pref;
   }
 
   public void stringShared()
   {
+    editor = getSharedPreference().edit();
+    editor.putBoolean("isLog",true);
     editor.putString("hh","kk");
     editor.putLong("long",1);
     editor.putFloat("floate",0.3f);
-    editor.putBoolean("isLog",false);
-    editor.commit();
+    editor.apply();
   }
 
 

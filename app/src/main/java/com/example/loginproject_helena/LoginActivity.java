@@ -29,11 +29,14 @@ public class LoginActivity extends AppCompatActivity {
     login = findViewById(R.id.login);
     registerLogin = findViewById(R.id.registerLogin);
 
+
     String s = edt_nameLogin.getText().toString();
 
     SharedPreferences prefLoginn = getSharedPreferences("MYSHARED",MODE_PRIVATE);
     String userName = prefLoginn.getString("nameLogin","name");
     String password = prefLoginn.getString("passWordLogin","pass");
+
+      BaseApplication baseApplication = new BaseApplication();
 
 
     login.setOnClickListener(new View.OnClickListener() {
@@ -77,4 +80,5 @@ public class LoginActivity extends AppCompatActivity {
   {
     Toast.makeText(this, "helena", Toast.LENGTH_SHORT).show();
   }
+
 }
