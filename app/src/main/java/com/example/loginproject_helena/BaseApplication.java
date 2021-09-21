@@ -29,6 +29,7 @@ public class BaseApplication extends Application {
   {
     Log.i("islog", String.valueOf(pref.getBoolean("isLog", true)));
     Log.i("String",String.valueOf(pref.getString("logString","helena")));
+    Log.i("Long",String.valueOf(pref.getLong("Long",44)));
     return pref;
   }
 
