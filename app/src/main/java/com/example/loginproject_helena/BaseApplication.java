@@ -28,6 +28,7 @@ public class BaseApplication extends Application {
   public SharedPreferences isLogin()
   {
     Log.i("islog", String.valueOf(pref.getBoolean("isLog", true)));
+    Log.i("String",String.valueOf(pref.getString("logString","helena")));
     return pref;
   }
 
